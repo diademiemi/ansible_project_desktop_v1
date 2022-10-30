@@ -1,0 +1,26 @@
+---
+- name: Configure auto-login on SDDM
+  become: true
+  ansible.builtin.lineinfile:
+    path: /etc/sddm.conf
+    regexp: '^#User='
+    line: 'User={{ global_user }}'
+    state: present
+    create: true
+    mode: 0644
+    backup: true
+  notify: Restart SDDM
+
+- name: Set plasma desktop as session for auto-login
+  become: true
+  ansible.builtin.lineinfile:
+    path: /etc/sddm.conf
+    regexp: '^#Session='
+    line: 'Session=plasmax11'
+    state: present
+    create: true
+    mode: 0644
+    backup: true
+  notify: Restart SDDM
+
+- meta: flush_handlers

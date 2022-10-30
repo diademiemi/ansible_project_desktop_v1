@@ -1,0 +1,4 @@
+roles/ansible_role_*
+!roles/requirements.yml
+.vscode
+.vagrant

@@ -1,0 +1,5 @@
+---
+- src: https://github.com/diademiemi/ansible_role_discord.git
+  name: ansible_role_discord
+  scm: git
+  version: main

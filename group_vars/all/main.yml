@@ -1,0 +1,2 @@
+global_user: diademiemi
+discord_user: "{{ global_user }}"

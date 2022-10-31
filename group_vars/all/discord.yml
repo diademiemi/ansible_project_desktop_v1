@@ -2,6 +2,7 @@
 discord_user: "{{ global_user }}"
 discord_version: discord
 discord_install_betterdiscord: true
+
 discord_betterdiscord_plugins:
   - "https://mwittrien.github.io/BetterDiscordAddons/Library/0BDFDB.plugin.js"
   - "https://mwittrien.github.io/BetterDiscordAddons/Plugins/BetterNsfwTag/BetterNsfwTag.plugin.js"
@@ -18,7 +19,6 @@ discord_betterdiscord_plugins:
   - "https://mwittrien.github.io/BetterDiscordAddons/Plugins/SplitLargeMessages/SplitLargeMessages.plugin.js"
   - "https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/TypingIndicator/TypingIndicator.plugin.js"
   - "https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js"
-
 
 discord_betterdiscord_themes:
   - url: https://betterdiscord.app/Download?id=124

@@ -1,2 +1,4 @@
+---
 global_user: diademiemi
-discord_user: "{{ global_user }}"
+
+autologin_user: "{{ global_user }}"

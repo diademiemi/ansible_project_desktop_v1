@@ -4,22 +4,38 @@
 Vagrant.configure("2") do |config|
     config.nfs.functional = false
 
-    config.vm.define "Desktop" do |host|
-        host.vm.box = "fedora36kde" # See comment below
-        host.vm.hostname = "Desktop"
+    config.vm.define "vagrant_desktop" do |host|
+      host.vm.box = "fedora36kde" # See comment below
+      host.vm.hostname = "desktop"
 
-        host.vm.network :private_network, ip: "192.168.123.2"
-        host.vm.provision :hosts, :sync_hosts => true
+      host.vm.network :private_network, ip: "192.168.123.2"
+      host.vm.provision :hosts, :sync_hosts => true
 
-        config.vm.provision "shell",
-        inline: "ip route add 8.8.8.8/32 dev ens6" # Set ansible_default_ipv4.interface to eth1
+      config.vm.provision "shell",
+      inline: "ip route add 8.8.8.8/32 dev ens6" # Set ansible_default_ipv4.interface to eth1
 
-        config.vm.provider :libvirt do |libvirt|
-            libvirt.driver = "kvm"
-            libvirt.memory = 6144
-            libvirt.cpus = 4
-        end
+      config.vm.provider :libvirt do |libvirt|
+          libvirt.driver = "kvm"
+          libvirt.memory = 6144
+          libvirt.cpus = 4
+      end
+  end
+  config.vm.define "vagrant_laptop" do |host|
+    host.vm.box = "fedora36kde" # See comment below
+    host.vm.hostname = "laptop"
+
+    host.vm.network :private_network, ip: "192.168.123.3"
+    host.vm.provision :hosts, :sync_hosts => true
+
+    config.vm.provision "shell",
+    inline: "ip route add 8.8.8.8/32 dev ens6" # Set ansible_default_ipv4.interface to eth1
+
+    config.vm.provider :libvirt do |libvirt|
+        libvirt.driver = "kvm"
+        libvirt.memory = 6144
+        libvirt.cpus = 4
     end
+end
 end
 
 =begin

@@ -23,5 +23,5 @@ discord_betterdiscord_plugins:
 discord_betterdiscord_themes:
   - url: https://betterdiscord.app/Download?id=124
     name: HorizontalServerList
-  - url: https://betterdiscord.app/Download?id=607
-    name: Float
+  - url: https://raw.githubusercontent.com/maenDisease/BetterDiscordStuff/main/Themes/Float/zFloat.theme.css
+    name: zFloat

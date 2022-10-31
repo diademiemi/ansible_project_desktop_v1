@@ -1,2 +1,2 @@
 ---
-autologin_user: "{{ ansible_user }}"
+autologin_user: "{{ ansible_user_id }}"

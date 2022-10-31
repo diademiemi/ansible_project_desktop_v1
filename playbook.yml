@@ -2,4 +2,10 @@
 - hosts: all
   roles:
     - desktop_config
-    - ansible_role_discord
+
+- hosts: all
+  tags: apps
+  roles:
+    - { name: ansible_role_discord, tags: discord }
+    - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }
+    - { name: ansible_role_android_studio, tags: [ides, android_studio] }

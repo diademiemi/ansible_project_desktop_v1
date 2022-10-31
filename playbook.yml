@@ -7,6 +7,7 @@
   tags: apps
   roles:
     - { name: ansible_role_discord, tags: discord }
+    - { name: ansible_role_syncthing, tags: syncthing }
     - { name: ansible_role_android_studio, tags: [ides, android_studio] }
     - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }
     - { name: ansible_role_vscode, tags: [ides, vscode] }

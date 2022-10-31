@@ -1,0 +1,16 @@
+intellij_idea_user: "{{ global_user }}"
+android_studio_user: "{{ global_user }}"
+
+intellij_idea_plugins:
+  - 10233 # Discord Integration
+  - 16209 # Telemetry by Red Hat, dependency for Quarkus :(
+  - 14242 # Quarkus Run Configs
+  - 13234 # Quarkus
+  - 13643 # Monokai Pro Theme
+  - 8327 # Minecraft Development
+  - 15921 # Kubernetes by Red Hat
+  - 17718 # GitHub Copilot
+
+android_studio_plugins:
+  - 10233 # Discord Integration
+  - 17718 # GitHub Copilot

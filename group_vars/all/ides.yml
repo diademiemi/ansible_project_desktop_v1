@@ -1,5 +1,6 @@
 intellij_idea_user: "{{ global_user }}"
 android_studio_user: "{{ global_user }}"
+vscode_user: "{{ global_user }}"
 
 intellij_idea_plugins:
   - 10233 # Discord Integration
@@ -14,3 +15,53 @@ intellij_idea_plugins:
 android_studio_plugins:
   - 10233 # Discord Integration
   - 17718 # GitHub Copilot
+
+vscode_extensions:
+  # AI stuff
+  - GitHub.copilot-nightly
+  - VisualStudioExptTeam.vscodeintellicode
+  - VisualStudioExptTeam.intellicode-api-usage-examples
+  # Minecraft related
+  - SPGoding.datapack-language-server
+  # Docker related
+  - ms-vscode-remote.remote-containers
+  - ms-azuretools.vscode-docker
+  - exiasr.hadolint
+  # DevOps
+  - redhat.ansible
+  - hashicorp.terraform
+  - bbenoist.vagrant
+  - wholroyd.jinja
+  - puppet.puppet-vscode
+  # Python related
+  - njpwerner.autodocstring
+  - batisteo.vscode-django
+  - ms-python.isort
+  - KevinRose.vsc-python-indent
+  # Marlin related
+  - marlinfirmware.auto-build
+  - platformio.platformio-ide
+  # Language support
+  - jeff-hykin.better-cpp-syntax
+  - ms-vscode.cpptools
+  - ms-vscode.cpptools-extension-pack
+  - ms-vscode.cpptools-themes
+  - ms-vscode.cmake-tools
+  - vscjava.vscode-java-pack
+  - cschleiden.vscode-github-actions
+  - golang.go
+  - fwcd.kotlin
+  - ms-vscode.makefile-tools
+  - yzhang.markdown-all-in-one
+  - ms-python.vscode-pylance
+  - ms-python.python
+  - redhat.vscode-yaml
+  - rust-lang.rust-analyzer
+  # Features
+  - cschlosser.doxdocgen
+  - bierner.github-markdown-preview
+  - GitHub.vscode-pull-request-github
+  - GitLab.gitlab-workflow
+  - eamodio.gitlens
+  # Themes
+  - GitHub.github-vscode-theme

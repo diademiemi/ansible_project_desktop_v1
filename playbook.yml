@@ -15,6 +15,7 @@
   roles:
     - { name: ansible_role_syncthing, tags: syncthing }
     - { name: ansible_role_protonvpn, tags: protonvpn }
+    - { name: diademiemi.firefox.install, tags: firefox }
     - { name: ansible_role_android_studio, tags: [ides, android_studio] }
     - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }
     - { name: ansible_role_vscode, tags: [ides, vscode] }

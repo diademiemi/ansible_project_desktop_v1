@@ -1,0 +1,5 @@
+---
+collections:
+  - name: https://github.com/diademiemi/ansible_collection_firefox.git
+    type: git
+    version: main

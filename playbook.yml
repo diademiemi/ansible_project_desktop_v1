@@ -4,10 +4,17 @@
     - desktop_config
 
 - hosts: all
-  tags: apps
+  tags: apps, discord
+  serial: 1 # Prevent rate limiting
   roles:
     - { name: ansible_role_discord, tags: discord }
+
+
+- hosts: all
+  tags: apps
+  roles:
     - { name: ansible_role_syncthing, tags: syncthing }
+    - { name: ansible_role_protonvpn, tags: protonvpn }
     - { name: ansible_role_android_studio, tags: [ides, android_studio] }
     - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }
     - { name: ansible_role_vscode, tags: [ides, vscode] }

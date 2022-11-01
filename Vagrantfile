@@ -20,6 +20,7 @@ Vagrant.configure("2") do |config|
           libvirt.cpus = 4
       end
   end
+
   config.vm.define "vagrant_laptop" do |host|
     host.vm.box = "fedora36kde" # See comment below
     host.vm.hostname = "laptop"
@@ -35,7 +36,25 @@ Vagrant.configure("2") do |config|
         libvirt.memory = 6144
         libvirt.cpus = 4
     end
-end
+  end
+
+  config.vm.define "vagrant_ubuntu_control" do |host|
+    host.vm.box = "kubuntu2204" # See comment below but do it for (K)Ubuntu instead
+    host.vm.hostname = "ubuntu-control"
+
+    host.vm.network :private_network, ip: "192.168.123.3"
+    host.vm.provision :hosts, :sync_hosts => true
+
+    # config.vm.provision "shell",
+    # inline: "ip route add 8.8.8.8/32 dev ens6" # Set ansible_default_ipv4.interface to eth1
+
+    config.vm.provider :libvirt do |libvirt|
+        libvirt.driver = "kvm"
+        libvirt.memory = 4096
+        libvirt.cpus = 2
+    end
+  end
+
 end
 
 =begin

@@ -1,5 +1,25 @@
 ---
+- src: https://github.com/diademiemi/ansible_role_android_studio.git
+  name: ansible_role_android_studio
+  scm: git
+  version: main
 - src: https://github.com/diademiemi/ansible_role_discord.git
   name: ansible_role_discord
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_intellij_idea.git
+  name: ansible_role_intellij_idea
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_protonvpn.git
+  name: ansible_role_protonvpn
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_syncthing.git
+  name: ansible_role_syncthing
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_vscode.git
+  name: ansible_role_vscode
   scm: git
   version: main

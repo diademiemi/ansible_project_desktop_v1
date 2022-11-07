@@ -1,1 +1,2 @@
 syncthing_user: "{{ global_user }}"
+syncthing_configure: false

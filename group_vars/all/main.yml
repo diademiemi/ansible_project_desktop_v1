@@ -3,3 +3,4 @@ global_user: diademiemi
 
 desktop_user: "{{ global_user }}"
 protonvpn_user: "{{ global_user }}"
+vagrant_libvirt_user: "{{ global_user }}"

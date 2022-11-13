@@ -57,6 +57,7 @@ vscode_extensions:
   - ms-python.python
   - redhat.vscode-yaml
   - rust-lang.rust-analyzer
+  - mechatroner.rainbow-csv
   # Features
   - cschlosser.doxdocgen
   - bierner.github-markdown-preview

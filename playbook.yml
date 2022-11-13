@@ -4,22 +4,25 @@
   roles:
     - desktop_config
 
-- hosts: all
+- hosts: desktop, laptop
   tags: apps, discord
   serial: 1 # Prevent rate limiting
   roles:
     - { name: ansible_role_discord, tags: discord }
 
+- hosts: desktop, worklaptop
+  tags: apps, msteams
+  roles:
+    - ansible_role_msteams
+
 - hosts: all
   tags: apps
   roles:
-    - { name: ansible_role_msteams, tags: msteams }
     - { name: ansible_role_android_studio, tags: [ides, android_studio] }
     - { name: ansible_role_freetube, tags: freetube }
     - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }
     - { name: ansible_role_joplin_desktop, tags: joplin }
     - { name: ansible_role_protonvpn, tags: protonvpn }
-    - { name: ansible_role_rpi_imager, tags: rpi_imager }
     - { name: ansible_role_syncthing, tags: syncthing }
     - { name: ansible_role_vscode, tags: [ides, vscode] }
     - { name: diademiemi.firefox.install, tags: [firefox, firefox-install] } # Testing
@@ -28,15 +31,16 @@
 - hosts: all
   tags: tools
   roles:
+    - { name: ansible_role_rpi_imager, tags: rpi_imager }
     - { name: ansible_role_vagrant_libvirt, tags: vagrant_libvirt }
 
 - hosts: all
   tags: tools
   tasks:
     - name: Install packages
+      become: true
       ansible.builtin.package:
         name:
-          - kubectl
           - git
           - curl
           - wget

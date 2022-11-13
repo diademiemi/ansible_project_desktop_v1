@@ -22,3 +22,8 @@
     - { name: ansible_role_vscode, tags: [ides, vscode] }
     - { name: diademiemi.firefox.install, tags: [firefox, firefox-install] } # Testing
     - { name: diademiemi.firefox.configure, tags: [firefox, firefox-config] } # Testing
+
+- hosts: all
+  tags: tools
+  roles:
+    - { name: ansible_role_vagrant_libvirt, tags: vagrant_libvirt }

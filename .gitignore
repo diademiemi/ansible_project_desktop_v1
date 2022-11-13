@@ -4,3 +4,5 @@ roles/ansible_role_*
 .vagrant
 ansible_collections/*
 !ansible_collections/requirements.yml
+
+.vault-passwd

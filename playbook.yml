@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  tags: desktop
   roles:
     - desktop_config
 
@@ -12,6 +13,7 @@
 - hosts: all
   tags: apps
   roles:
+    - { name: ansible_role_msteams, tags: msteams }
     - { name: ansible_role_android_studio, tags: [ides, android_studio] }
     - { name: ansible_role_freetube, tags: freetube }
     - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }

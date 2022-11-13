@@ -2,3 +2,5 @@ roles/ansible_role_*
 !roles/requirements.yml
 .vscode
 .vagrant
+ansible_collections/*
+!ansible_collections/requirements.yml

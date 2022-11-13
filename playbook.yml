@@ -13,6 +13,7 @@
 - hosts: all
   tags: apps
   roles:
+    - { name: ansible_role_rpi_imager, tags: rpi_imager }
     - { name: ansible_role_syncthing, tags: syncthing }
     - { name: ansible_role_protonvpn, tags: protonvpn }
     - { name: ansible_role_freetube, tags: freetube }

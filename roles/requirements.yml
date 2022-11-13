@@ -7,16 +7,36 @@
   name: ansible_role_discord
   scm: git
   version: main
+- src: https://github.com/diademiemi/ansible_role_freetube.git
+  name: ansible_role_freetube
+  scm: git
+  version: main
 - src: https://github.com/diademiemi/ansible_role_intellij_idea.git
   name: ansible_role_intellij_idea
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_joplin_desktop.git
+  name: ansible_role_joplin_desktop
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_msteams.git
+  name: ansible_role_msteams
   scm: git
   version: main
 - src: https://github.com/diademiemi/ansible_role_protonvpn.git
   name: ansible_role_protonvpn
   scm: git
   version: main
+- src: https://github.com/diademiemi/ansible_role_rpi_imager.git
+  name: ansible_role_rpi_imager
+  scm: git
+  version: main
 - src: https://github.com/diademiemi/ansible_role_syncthing.git
   name: ansible_role_syncthing
+  scm: git
+  version: main
+- src: https://github.com/diademiemi/ansible_role_vagrant_libvirt.git
+  name: ansible_role_vagrant_libvirt
   scm: git
   version: main
 - src: https://github.com/diademiemi/ansible_role_vscode.git

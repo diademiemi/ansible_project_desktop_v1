@@ -17,7 +17,7 @@ discord_betterdiscord_plugins:
   - "https://raw.githubusercontent.com/Farcrada/DiscordPlugins/master/Hide-Channels/HideChannels.plugin.js"
   - "https://raw.githubusercontent.com/qwerasd205/BDPlugins/8c4648ab5e3dc39adec6b0bbe12d039290c1c437/PinIcon/PinIcon.plugin.js"
   - "https://mwittrien.github.io/BetterDiscordAddons/Plugins/SplitLargeMessages/SplitLargeMessages.plugin.js"
-  - "https://github.com/l0c4lh057/BetterDiscordStuff/blob/master/Plugins/TypingIndicator/TypingIndicator.plugin.js"
+  - "https://raw.githubusercontent.com/l0c4lh057/BetterDiscordStuff/master/Plugins/TypingIndicator/TypingIndicator.plugin.js"
   - "https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js"
 
 discord_betterdiscord_themes:

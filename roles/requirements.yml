@@ -27,6 +27,10 @@
   name: ansible_role_protonvpn
   scm: git
   version: main
+- src: https://github.com/diademiemi/ansible_role_pycharm.git
+  name: ansible_role_pycharm
+  scm: git
+  version: main
 - src: https://github.com/diademiemi/ansible_role_rpi_imager.git
   name: ansible_role_rpi_imager
   scm: git

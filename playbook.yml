@@ -1,5 +1,13 @@
 ---
 - hosts: all
+  tags: always
+  tasks:
+    - name: Gather facts
+      setup:
+      delegate_facts: true
+      tags: always
+
+- hosts: all
   tags: desktop
   roles:
     - desktop_config
@@ -21,12 +29,13 @@
     - { name: ansible_role_android_studio, tags: [ides, android_studio] }
     - { name: ansible_role_freetube, tags: freetube }
     - { name: ansible_role_intellij_idea, tags: [ides, intellij_idea] }
+    - { name: ansible_role_pycharm, tags: [ides, pycharm] }
     - { name: ansible_role_joplin_desktop, tags: joplin }
     - { name: ansible_role_protonvpn, tags: protonvpn }
     - { name: ansible_role_syncthing, tags: syncthing }
     - { name: ansible_role_vscode, tags: [ides, vscode] }
-    - { name: diademiemi.firefox.install, tags: [firefox, firefox-install] } # Testing
-    - { name: diademiemi.firefox.configure, tags: [firefox, firefox-config] } # Testing
+      #    - { name: diademiemi.firefox.install, tags: [firefox, firefox-install] } # Testing
+      #    - { name: diademiemi.firefox.configure, tags: [firefox, firefox-config] } # Testing
 
 - hosts: all
   tags: tools
